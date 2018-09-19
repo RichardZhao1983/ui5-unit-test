@@ -9,10 +9,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        withAnt(installation: '/usr/local/Cellar/ant/1.10.5', jdk: '/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk') {
-          sh 'echo "good"'
-        }
-
+         sh 'echo good'
+         sh 'phantomjs ./src/test/js/runner.js ./src/test/js/qunit.html'
       }
     }
   }
