@@ -5,7 +5,7 @@ pipeline {
       steps {
          sh 'echo $PATH'
 	 sh 'who am i'
-         sh 'phantomjs ./src/test/js/runner.js ./src/test/js/qunit.html'
+         sh 'brew list'
       }
     }
   }
