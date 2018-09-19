@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-         sh '$PATH'
-	 sh 'whoami'
+         sh 'echo $PATH'
+	 sh 'who am i'
          sh 'phantomjs ./src/test/js/runner.js ./src/test/js/qunit.html'
       }
     }
