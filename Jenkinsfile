@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
          sh '$PATH'
+	 sh 'whoami'
          sh 'phantomjs ./src/test/js/runner.js ./src/test/js/qunit.html'
       }
     }
